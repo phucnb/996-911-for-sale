@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2002 Porsche 911 Carrera 4S — For Sale</title>
+</head>
+<body style="background:#f3f4f6; margin:0; padding:2rem 1rem;">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap');
+  .lw { font-family: 'DM Sans', sans-serif; color: #111827; max-width: 680px; margin: 0 auto; }
+  .hero { background: #1a1a1a; border-radius: 12px; overflow: hidden; margin-bottom: 1rem; padding: 2rem 2rem 1.75rem; }
+  .hero-badge { display: inline-block; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; background: #CC0000; color: #fff; padding: 4px 12px; border-radius: 4px; margin-bottom: 0.85rem; font-weight: 500; }
+  .hero-title { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 600; color: #fff; margin: 0 0 0.2rem; line-height: 1.15; }
+  .hero-sub { font-size: 13px; color: #999; margin: 0 0 1.25rem; font-weight: 300; letter-spacing: 0.04em; }
+  .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #333; border-radius: 8px; overflow: hidden; margin-bottom: 1.25rem; }
+  .hero-stat { background: #252525; padding: 0.7rem 0.8rem; text-align: center; }
+  .hero-stat-val { font-size: 16px; font-weight: 500; color: #fff; display: block; line-height: 1.2; }
+  .hero-stat-lbl { font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-top: 2px; }
+  .price-row { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .price-block { display: flex; align-items: baseline; gap: 8px; }
+  .price-tag { font-family: 'Playfair Display', serif; font-size: 30px; color: #CC0000; }
+  .price-note { font-size: 12px; color: #777; }
+  .price-vin { font-size: 11px; color: #555; letter-spacing: 0.05em; }
+
+  .sec { background: #ffffff; border: 0.5px solid #e5e7eb; border-radius: 12px; margin-bottom: 0.85rem; overflow: hidden; }
+  .sec-hd { display: flex; align-items: center; gap: 10px; padding: 0.8rem 1.25rem; border-bottom: 0.5px solid #e5e7eb; background: #ffc1b3; }
+  .sec-ic { width: 26px; height: 26px; border-radius: 6px; background: #CC0000; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .sec-ic svg { width: 13px; height: 13px; fill: #fff; }
+  .sec-ttl { font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.09em; color: #111827; }
+  .sec-bd { padding: 1rem 1.25rem; }
+
+  .seller-note { font-size: 14px; line-height: 1.8; color: #6b7280; margin: 0; }
+  .seller-note strong { color: #111827; }
+
+  .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem 1.5rem; }
+  .spec-row { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 0.5px solid #e5e7eb; padding-bottom: 0.4rem; font-size: 13px; }
+  .sk { color: #6b7280; flex-shrink: 0; margin-right: 8px; }
+  .sv { font-weight: 500; text-align: right; }
+
+  .hl-box { background: #f9fafb; border-left: 3px solid #CC0000; border-radius: 0 6px 6px 0; padding: 0.75rem 1rem; margin-bottom: 0.65rem; }
+  .hl-box:last-child { margin-bottom: 0; }
+  .hl-t { font-weight: 500; font-size: 13px; margin-bottom: 2px; color: #111827; }
+  .hl-b { color: #6b7280; font-size: 13px; line-height: 1.55; }
+
+  .maint-grid { display: grid; gap: 6px; }
+  .maint-item { display: flex; gap: 10px; align-items: flex-start; padding: 0.6rem 0.75rem; background: #f9fafb; border-radius: 6px; border: 0.5px solid #e5e7eb; }
+  .maint-year { font-size: 11px; font-weight: 500; color: #CC0000; min-width: 36px; padding-top: 1px; letter-spacing: 0.04em; }
+  .maint-km { font-size: 11px; color: #6b7280; min-width: 52px; padding-top: 1px; }
+  .maint-desc { font-size: 13px; color: #111827; line-height: 1.45; }
+  .maint-desc span { color: #6b7280; font-size: 12px; }
+
+  .oil-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .oil-card { background: #f9fafb; border: 0.5px solid #e5e7eb; border-radius: 8px; padding: 0.7rem 0.9rem; }
+  .oil-ct { font-size: 11px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 5px; }
+  .oil-v { font-size: 13px; font-weight: 500; color: #3B6D11; }
+  .oil-d { font-size: 12px; color: #6b7280; margin-top: 2px; }
+
+  .tag-row { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 0.65rem; }
+  .tag { font-size: 11.5px; padding: 3px 9px; border-radius: 20px; font-weight: 400; }
+  .tg { background: #EAF3DE; color: #3B6D11; }
+  .ta { background: #FAEEDA; color: #854F0B; }
+  .tb { background: #E6F1FB; color: #185FA5; }
+  .tr { background: #FCEBEB; color: #A32D2D; }
+
+  .cond-row { display: flex; align-items: flex-start; gap: 9px; margin-bottom: 0.6rem; font-size: 13px; line-height: 1.5; color: #111827; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+  .dg { background: #639922; } .da { background: #BA7517; } .dr { background: #E24B4A; }
+  .div { height: 0.5px; background: #e5e7eb; margin: 0.75rem 0; }
+  .sub-lbl { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin-bottom: 0.55rem; }
+
+  .timeline { position: relative; padding-left: 18px; }
+  .timeline::before { content:''; position:absolute; left:4px; top:6px; bottom:6px; width:1px; background:#e5e7eb; }
+  .tl-item { position:relative; margin-bottom:0.9rem; font-size:13px; }
+  .tl-item::before { content:''; position:absolute; left:-16px; top:5px; width:7px; height:7px; border-radius:50%; background:#CC0000; }
+  .tl-yr { font-size:11px; color:#6b7280; text-transform:uppercase; letter-spacing:0.07em; margin-bottom:1px; }
+  .tl-tx { line-height:1.5; color:#111827; }
+  .tl-tx span { color:#6b7280; font-size:12px; }
+
+  .cta-bar { background:#1a1a1a; border-radius:12px; padding:1.25rem 1.5rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+  .cta-l strong { color:#fff; font-size:15px; font-weight:500; }
+  .cta-l p { color:#888; font-size:12px; margin:3px 0 0; }
+  .cta-btn { background:#CC0000; color:#fff; border:none; border-radius:8px; padding:0.65rem 1.4rem; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; cursor:pointer; }
+
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .gallery-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; cursor: pointer; transition: opacity 0.15s; display: block; }
+  .gallery-grid img:hover { opacity: 0.85; }
+  .gallery-ph { width: 100%; aspect-ratio: 4/3; border-radius: 6px; background: #f3f4f6; border: 1.5px dashed #d1d5db; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #9ca3af; text-align: center; }
+
+  .log-wrap { overflow-x: auto; }
+  .log-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .log-table th { text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.07em; color: #6b7280; padding: 0.45rem 0.65rem; border-bottom: 1px solid #e5e7eb; white-space: nowrap; }
+  .log-table td { padding: 0.55rem 0.65rem; border-bottom: 0.5px solid #f3f4f6; vertical-align: top; line-height: 1.45; }
+  .log-table tr:last-child td { border-bottom: none; }
+  .log-table tr:hover td { background: #f9fafb; }
+  .log-date { white-space: nowrap; color: #6b7280; }
+  .log-km { white-space: nowrap; font-weight: 500; }
+  .log-shop { color: #6b7280; white-space: nowrap; }
+  .log-badge { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 10px; font-weight: 500; margin-bottom: 3px; }
+  .lb-eng { background: #FCEBEB; color: #A32D2D; }
+  .lb-std { background: #E6F1FB; color: #185FA5; }
+  .lb-own { background: #EAF3DE; color: #3B6D11; }
+  .log-parts { margin: 0.45rem 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 2px; }
+  .log-parts li { font-size: 11px; color: #6b7280; line-height: 1.4; }
+  .log-pn { font-family: monospace; font-size: 10px; background: #f3f4f6; padding: 1px 4px; border-radius: 3px; color: #374151; }
+
+  .lb { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; }
+  .lb.open { display: flex; }
+  .lb img { max-width: 92vw; max-height: 88vh; border-radius: 8px; object-fit: contain; }
+  .lb-close { position: absolute; top: 1.25rem; right: 1.5rem; color: #fff; font-size: 28px; cursor: pointer; line-height: 1; background: none; border: none; }
+  .lb-prev, .lb-next { position: absolute; top: 50%; transform: translateY(-50%); color: #fff; font-size: 32px; cursor: pointer; background: none; border: none; padding: 0 1rem; user-select: none; }
+  .lb-prev { left: 0; } .lb-next { right: 0; }
+
+  @media(max-width:480px){.spec-grid,.oil-grid{grid-template-columns:1fr;}.hero-stats{grid-template-columns:repeat(2,1fr);}.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+</style>
+
+<div class="lw">
+
+  <div class="hero">
+    <div style="display:flex; justify-content:flex-end; gap:1.25rem; margin-bottom:1rem; font-size:12px;">
+      <a href="tel:+16479139999" style="color:#aaa; text-decoration:none;">📞 +1 (647) 913-9999</a>
+      <a href="mailto:contact@phucnb.com" style="color:#aaa; text-decoration:none;">✉ contact@phucnb.com</a>
+    </div>
+    <div class="hero-badge">For Sale · Toronto, ON · $42,000 CAD</div>
+    <div class="hero-title">2002 Porsche 911 Carrera 4S</div>
+    <div class="hero-sub">996 · Manual 6-Speed · AWD · Guards Red Wrap · WP0AA29942S621974</div>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-val">~239k</span><span class="hero-stat-lbl">Total KM</span></div>
+      <div class="hero-stat"><span class="hero-stat-val">~175k</span><span class="hero-stat-lbl">Engine KM</span></div>
+      <div class="hero-stat"><span class="hero-stat-val">3</span><span class="hero-stat-lbl">Prior owners</span></div>
+      <div class="hero-stat"><span class="hero-stat-val">0</span><span class="hero-stat-lbl">Accidents</span></div>
+    </div>
+    <div class="price-row">
+      <div class="price-block">
+        <span class="price-tag">$42,000</span>
+        <span class="price-note">CAD · OBO</span>
+      </div>
+      <span class="price-vin">VIN: WP0AA29942S621974</span>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-ic"><svg viewBox="0 0 16 16"><path d="M8 1C4.134 1 1 4.134 1 8s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm.5 10.5V11H9a2 2 0 0 0 0-4H7V5.5h1V4h-2v1.5H5V7h1v4H5v1.5h2V14h2v-1.5h-.5zm0-4V9H9a.5.5 0 0 1 0-1H8.5V7.5z"/></svg></div>
+      <div class="sec-ttl">Why I'm selling</div>
+    </div>
+    <div class="sec-bd">
+      <p class="seller-note">
+        I'll be upfront: <strong>I'm not selling this car because anything is wrong with it.</strong> I love the 996 platform — I genuinely do. That's exactly the problem. My next build is a 911 996 LS swap with a wide body kit, and this car is simply <strong>too good to chop up</strong>. The engine is healthy, the history is immaculate, and the body is straight. It deserves an owner who'll drive and appreciate it as-is, not use it as a donor.
+      </p>
+      <p class="seller-note" style="margin-top: 0.65rem;">
+        I bought this car knowing the 996 inside out. I commissioned oil analysis, did a borescope before purchase, and continued the meticulous maintenance the previous owner kept for 15 years. <strong>This is the cleanest documented 996 C4S you'll find in this price range.</strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-ic"><svg viewBox="0 0 16 16"><path d="M3 2h10a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm1 2v8h8V4H4zm1.5 1.5h5v1h-5v-1zm0 2.5h5v1h-5V8zm0 2.5h3v1h-3v-1z"/></svg></div>
+      <div class="sec-ttl">Vehicle specs</div>
+    </div>
+    <div class="sec-bd">
+      <div class="spec-grid">
+        <div class="spec-row"><span class="sk">Year / Model</span><span class="sv">2002 · 911 C4S (996)</span></div>
+        <div class="spec-row"><span class="sk">Engine</span><span class="sv">3.6L Flat-Six (M96)</span></div>
+        <div class="spec-row"><span class="sk">Transmission</span><span class="sv">6-Speed Manual</span></div>
+        <div class="spec-row"><span class="sk">Drivetrain</span><span class="sv">AWD (C4S)</span></div>
+        <div class="spec-row"><span class="sk">Odometer</span><span class="sv">~239,000 km</span></div>
+        <div class="spec-row"><span class="sk">Engine mileage</span><span class="sv">~175,000 km</span></div>
+        <div class="spec-row"><span class="sk">Oil type</span><span class="sv">LM 5W-40</span></div>
+        <div class="spec-row"><span class="sk">Origin</span><span class="sv">USA (Omaha, NE)</span></div>
+        <div class="spec-row"><span class="sk">Base color</span><span class="sv">Black (wrapped red)</span></div>
+        <div class="spec-row"><span class="sk">Winter storage</span><span class="sv">Every year, always</span></div>
+      </div>
+      <div class="tag-row">
+        <span class="tag tg">Zero accidents</span>
+        <span class="tag tg">Never winter driven</span>
+        <span class="tag tg">No insurance claims</span>
+        <span class="tag tg">IMS resolved — factory engine</span>
+        <span class="tag tg">Blackstone oil lab verified</span>
+        <span class="tag tg">Full receipt history</span>
+        <span class="tag tb">Manual 6-speed</span>
+        <span class="tag tb">AWD C4S</span>
+        <span class="tag tb">GT2 wing + original included</span>
+        <span class="tag tb">CarPlay / Android Auto</span>
+        <span class="tag tb">Michelin PS4S (2024)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-ic"><svg viewBox="0 0 16 16"><path d="M8 1C4.134 1 1 4.134 1 8s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm.5 10.5V11H9a2 2 0 0 0 0-4H7V5.5h1V4h-2v1.5H5V7h1v4H5v1.5h2V14h2v-1.5h-.5zm0-4V9H9a.5.5 0 0 1 0-1H8.5V7.5z"/></svg></div>
+      <div class="sec-ttl">Engine — the story that matters</div>
+    </div>
+    <div class="sec-bd">
+      <div class="hl-box">
+        <div class="hl-t">Factory engine replacement — December 2010 at 63,988 km</div>
+        <div class="hl-b">The original engine failed its IMS bearing. A brand-new M96/03 engine (serial AT66569026) was purchased directly from Porsche for $19,500 + tax. The replacement uses the wider IMS bearing design (post-2005 spec) engineered into the motor — it cannot be serviced separately, meaning the failure mode that affects most 996s simply does not apply to this engine.</div>
+      </div>
+      <div class="hl-box">
+        <div class="hl-t">Pre-purchase borescope — August 2024 at 212,778 km</div>
+        <div class="hl-b">Spark plugs removed, cylinder walls inspected via borescope before current ownership transferred. All cylinders came back clean. Photos available on request.</div>
+      </div>
+      <div class="hl-box" style="margin-bottom:0.75rem;">
+        <div class="hl-t">Blackstone Laboratories oil analysis — two consecutive samples</div>
+        <div class="hl-b">Both samples sent to Blackstone show wear metals well within healthy range. The lab noted aluminum and iron actually fell between the first and second sample despite a longer drain interval — a strong sign of an engine in excellent mechanical health at 165,000 km on the clock.</div>
+      </div>
+      <div class="oil-grid">
+        <div class="oil-card">
+          <div class="oil-ct">Sample 1 · Nov 2024</div>
+          <div class="oil-v">All metals in range</div>
+          <div class="oil-d">5,200 km interval · 155k engine km · TBN 7.7</div>
+        </div>
+        <div class="oil-card">
+          <div class="oil-ct">Sample 2 · Aug 2025</div>
+          <div class="oil-v">Lower wear than sample 1</div>
+          <div class="oil-d">10,500 km interval · 165k engine km · No contamination</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-ic"><svg viewBox="0 0 16 16"><path d="M2 3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1H2V3zm0 3h12v7a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6zm3 2v1h6V8H5zm0 2.5v1h4v-1H5z"/></svg></div>
+      <div class="sec-ttl">Notable maintenance highlights</div>
+    </div>
+    <div class="sec-bd">
+      <p style="font-size:12.5px; color:#6b7280; margin:0 0 0.85rem; line-height:1.6;">Selected from the full documented history. Original receipts available for every item. Complete Excel log available on request.</p>
+      <div class="maint-grid">
+
+        <div class="maint-item">
+          <span class="maint-year">2010</span>
+          <span class="maint-km">63,988 km</span>
+          <div class="maint-desc"><strong>Factory engine replacement</strong> — new M96 from Porsche ($19,500). Poly-rib belt, all gaskets/seals, AC recharge, PS fluid. <span>Shop: Furtmair Auto</span></div>
+        </div>
+
+        <div class="maint-item">
+          <span class="maint-year">2013</span>
+          <span class="maint-km">110,454 km</span>
+          <div class="maint-desc"><strong>Water pump + expansion tank replaced</strong> — OEM pump ($363), new tank ($188), serpentine belt, coolant flush. <span>Shop: Furtmair Auto</span></div>
+        </div>
+
+        <div class="maint-item">
+          <span class="maint-year">2014</span>
+          <span class="maint-km">115,656 km</span>
+          <div class="maint-desc"><strong>Full clutch assembly R+R</strong> — F&S 3-piece clutch kit, transaxle removed, Hardy disc (driveshaft flex disc), 4-wheel alignment. <span>Shop: Furtmair Auto</span></div>
+        </div>
+
+        <div class="maint-item">
+          <span class="maint-year">2014</span>
+          <span class="maint-km">128,145 km</span>
+          <div class="maint-desc"><strong>Alternator + secondary air check valve replaced</strong> — Bosch alternator ($348), air check valve, vacuum leak diagnosed and repaired. <span>CEL resolved</span></div>
+        </div>
+
+        <div class="maint-item">
+          <span class="maint-year">2016</span>
+          <span class="maint-km">149,787 km</span>
+          <div class="maint-desc"><strong>Front brakes + rotors replaced</strong> — OEM discs both sides, pad set, sensors. Axle boot replaced. 4-wheel alignment. <span>Shop: Furtmair Auto</span></div>
+        </div>
+
+        <div class="maint-item">
+          <span class="maint-year">2016</span>
+          <span class="maint-km">152,365 km</span>
+          <div class="maint-desc"><strong>New tires (Michelin Pilot Sport PS2)</strong> — front 225/40R18, rear 295/30R18. Fuel vent valve replaced. PIWIS scan: no faults. <span>Shop: Furtmair Auto</span></div>
+        </div>
+
+        <div class="maint-item">
+          <span class="maint-year">2016</span>
+          <span class="maint-km">163,028 km</span>
+          <div class="maint-desc"><strong>Rear brakes + rotors replaced</strong> — OEM rear discs, pads, sensors. Front sway bar link. Air filter. <span>Shop: Furtmair Auto</span></div>
+        </div>
+
+        <div class="maint-item">
+          <span class="maint-year">2017</span>
+          <span class="maint-km">170,560 km</span>
+          <div class="maint-desc"><strong>Both tie rod ends (inner + outer) replaced</strong> — new summer tires Sumitomo HTR Z III, 4-wheel alignment. <span>Shop: Furtmair Auto</span></div>
+        </div>
+
+        <div class="maint-item">
+          <span class="maint-year">2018</span>
+          <span class="maint-km">180,223 km</span>
+          <div class="maint-desc"><strong>Ignition coils x6 + spark plugs replaced</strong> — heat shields, oil pressure sensor, brake fluid flush, front thrust arm bushings, left front axle boot (inner + outer). <span>Shop: Furtmair Auto</span></div>
+        </div>
+
+        <div class="maint-item">
+          <span class="maint-year">2020</span>
+          <span class="maint-km">190,072 km</span>
+          <div class="maint-desc"><strong>Ignition coils x6 + spark plugs again</strong> — new A/C condenser and o-rings, driver-side cooling fan replaced ($610), battery (Bosch), A/C seals. <span>PIWIS scan: misfires resolved</span></div>
+        </div>
+
+        <div class="maint-item">
+          <span class="maint-year">2022</span>
+          <span class="maint-km">203,922 km</span>
+          <div class="maint-desc"><strong>Full clutch kit (2nd clutch) + rear main seal</strong> — F&S 3-piece kit, clutch release arm, flex disc, transaxle removed. Flywheel pulled. Hood shocks replaced. Aftermarket muffler installed. <span>Shop: Furtmair Auto</span></div>
+        </div>
+
+        <div class="maint-item">
+          <span class="maint-year">2024</span>
+          <span class="maint-km">212,778 km</span>
+          <div class="maint-desc"><strong>Pre-purchase service before current ownership</strong> — catalytic converter replaced ($3,694), both engine mounts, spark plugs + borescope (all clear), oxygen sensors, brake fluid flush, air + cabin filters, freeze plug. <span>Shop: Furtmair Auto</span></div>
+        </div>
+
+        <div class="maint-item">
+          <span class="maint-year">2024</span>
+          <span class="maint-km">215,888 km</span>
+          <div class="maint-desc"><strong>4 new tires — Michelin PS4S</strong> — front 225/40/18, rear 295/30/18. <span>Current owner (Jimmy)</span></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-ic"><svg viewBox="0 0 16 16"><path d="M2 3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1H2V3zm0 3h12v7a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6zm3 2v1h6V8H5zm0 2.5v1h4v-1H5z"/></svg></div>
+      <div class="sec-ttl">Ownership history</div>
+    </div>
+    <div class="sec-bd">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-yr">2002–2007 · Owner 1 · Omaha, NE, USA</div>
+          <div class="tl-tx">Original US market car. Sold at 38,919 km.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-yr">2007–2009 · Owner 2 · GTA, Canada</div>
+          <div class="tl-tx">Imported to Canada. Intermediate shaft seal serviced at Pfaff Porsche. Sold at 48,778 km.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-yr">2009–2024 · Owner 3 · GTA, Canada — 15 years</div>
+          <div class="tl-tx">A dedicated Porsche enthusiast. <span>Every service performed at Furtmair Auto (Porsche specialist). Complete receipt file kept from day one. Engine replaced with factory unit in 2010. Sold at ~213,000 km.</span></div>
+        </div>
+        <div class="tl-item" style="margin-bottom:0;">
+          <div class="tl-yr">August 2024–present · Current owner (Jimmy) · Toronto, ON</div>
+          <div class="tl-tx">Pre-purchase inspection commissioned. Borescope clean. Oil analysis at Blackstone Laboratories (two samples, both healthy). New tires, continued oil regimen. <span>Selling to fund a dedicated LS-swap project build on a parts car.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-ic"><svg viewBox="0 0 16 16"><path d="M13 2H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM6 11l-3-3 1.06-1.06L6 8.88l4.94-4.94L12 5l-6 6z"/></svg></div>
+      <div class="sec-ttl">Condition notes</div>
+    </div>
+    <div class="sec-bd">
+      <div class="sub-lbl">Mechanical</div>
+      <div class="cond-row"><div class="dot dg"></div><div>Engine runs perfectly — no oil leaks, no rough idle, no power loss. Borescope clean. Blackstone lab verified.</div></div>
+      <div class="cond-row"><div class="dot dg"></div><div>Manual 6-speed: strong, no issues.</div></div>
+      <div class="cond-row"><div class="dot dg"></div><div>New catalytic converter (Aug 2024, $3,694). Exhaust sounds excellent.</div></div>
+      <div class="cond-row"><div class="dot dg"></div><div>Both engine mounts replaced Aug 2024. Clutch replaced 2022 (second clutch kit in the car's life).</div></div>
+      <div class="cond-row"><div class="dot dg"></div><div>All buttons and electrical functions working.</div></div>
+      <div class="cond-row"><div class="dot dg"></div><div>Michelin PS4S tires fitted October 2024 — barely used.</div></div>
+
+      <div class="div"></div>
+      <div class="sub-lbl">Exterior</div>
+      <div class="cond-row"><div class="dot dg"></div><div>Full red vinyl wrap (~4 years old) over original black paint. Paint condition under wrap unknown but car has never been in an accident.</div></div>
+      <div class="cond-row"><div class="dot dg"></div><div>GT2 wing installed. Original Carrera 4S wing included.</div></div>
+      <div class="cond-row"><div class="dot da"></div><div>RUF-style GT2 front bumper lip cracked at center. Brand-new unused OEM black front lip included.</div></div>
+      <div class="cond-row"><div class="dot da"></div><div>Wrap has minor surface scratches consistent with age.</div></div>
+      <div class="cond-row"><div class="dot da"></div><div>Small crack on one rear tail light lens — cosmetic, does not affect function.</div></div>
+      <div class="cond-row"><div class="dot da"></div><div>Wheels show light scuffing.</div></div>
+
+      <div class="div"></div>
+      <div class="sub-lbl">Interior</div>
+      <div class="cond-row"><div class="dot dg"></div><div>Kenwood head unit — wired CarPlay / Android Auto. Wireless with a cheap adapter.</div></div>
+      <div class="cond-row"><div class="dot dg"></div><div>Rear seats in good condition.</div></div>
+      <div class="cond-row"><div class="dot da"></div><div>Front seats show surface wear on the bolsters — no tears, normal for a 24-year-old driver's car.</div></div>
+      <div class="cond-row"><div class="dot da"></div><div>Light scratches on back panels of front seats.</div></div>
+
+      <div class="div"></div>
+      <div class="sub-lbl">What's included</div>
+      <div class="tag-row">
+        <span class="tag tb">Full receipt stack (2007–2025)</span>
+        <span class="tag tb">Excel maintenance log</span>
+        <span class="tag tb">2× Blackstone oil reports</span>
+        <span class="tag tb">Borescope images</span>
+        <span class="tag tb">Original C4S wing</span>
+        <span class="tag tb">New OEM front lip (black)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-ic"><svg viewBox="0 0 16 16"><path d="M14 3H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM5.5 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7.5 5H3l3-4 2 2.5 2-1.5 3 3z"/></svg></div>
+      <div class="sec-ttl">Photos</div>
+    </div>
+    <div class="sec-bd">
+      <div class="gallery-grid" id="gallery">
+        <!-- Add more images below by duplicating the <img> line with a new i.imgur.com URL -->
+        <img src="https://i.imgur.com/CERi6Dp.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/szo1RqL.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/sBzxLb0.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/mtrYSNX.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/2GUY4jZ.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/MVsuAxE.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/ygc2tTt.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/07VFBJe.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/1P4YQ6a.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/nzEDKjS.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/X9kyXn6.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/hXF3iS2.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/MW9zYOo.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/q2vp7uh.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/XuYvg5s.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/5q80sBe.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/LT5Davp.jpg" alt="Porsche 911 C4S">
+        <img src="https://i.imgur.com/4bbKRXi.jpg" alt="Porsche 911 C4S">
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- OIL REPORT SECTION -->
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-ic"><svg viewBox="0 0 16 16"><path d="M8 1a5 5 0 0 0-3.54 8.54l3.54 3.54 3.54-3.54A5 5 0 0 0 8 1zm0 1.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7zM7 5v3l2.5 1.5.5-.87L8 7.4V5H7z"/></svg></div>
+      <div class="sec-ttl">Blackstone Oil Analysis Reports</div>
+    </div>
+    <div class="sec-bd">
+      <p style="font-size:12.5px; color:#6b7280; margin:0 0 0.85rem; line-height:1.6;">Two consecutive lab reports from Blackstone Laboratories. </p>
+      <div class="gallery-grid" id="gallery-oil">
+        <!-- Replace the src with your i.imgur.com image URLs -->
+        <div class="gallery-ph">Sample 1 · Nov 2024<br><img src="https://i.imgur.com/cpJmnmJ.jpg"></div>
+        <div class="gallery-ph">Sample 2 · Aug 2025<br><img src="https://imgur.com/8ZUv3Xm.jpg"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BORESCOPE SECTION -->
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-ic"><svg viewBox="0 0 16 16"><path d="M6 1a5 5 0 1 0 3.88 8.17l3.97 3.97 1.06-1.06-3.97-3.97A5 5 0 0 0 6 1zm0 1.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7z"/></svg></div>
+      <div class="sec-ttl">Borescope Inspection — Aug 2024</div>
+    </div>
+    <div class="sec-bd">
+      <p style="font-size:12.5px; color:#6b7280; margin:0 0 0.85rem; line-height:1.6;">All 6 cylinders inspected at 212,778 km before ownership transfer. </p>
+      <div class="gallery-grid" id="gallery-bore">
+        <!-- Replace the src with your i.imgur.com image URLs -->
+        <img src="https://i.imgur.com/VTPHuZd.jpg">
+        <img src="https://i.imgur.com/ypCzbKU.jpg">
+        <img src="https://i.imgur.com/hztCWCx.jpg">
+        <img src="https://i.imgur.com/CqBbMZu.jpg">
+        <img src="https://i.imgur.com/ukVqjhm.jpg">
+        <img src="https://i.imgur.com/ixwzMHE.jpg">
+        <img src="https://i.imgur.com/h3TKkq7.jpg">
+        <img src="https://i.imgur.com/ONX7Hz6.jpg">
+        <img src="https://i.imgur.com/HRAs7iu.jpg">
+        <img src="https://i.imgur.com/U0eCUm7.jpg">
+        <img src="https://i.imgur.com/ewwNhxp.jpg">
+        <img src="https://i.imgur.com/kNdsEL2.jpg">
+        <img src="https://i.imgur.com/I85FBj2.jpg">
+        <img src="https://i.imgur.com/PE1GgbK.jpg">
+        <img src="https://i.imgur.com/4WfFDtQ.jpg">
+        <img src="https://i.imgur.com/MOTfV2y.jpg">
+        <img src="https://i.imgur.com/wX31sPA.jpg">
+        <img src="https://i.imgur.com/jJohCqB.jpg">
+        <img src="https://i.imgur.com/uOho4jj.jpg">
+        <img src="https://i.imgur.com/tFNiw1r.jpg">
+        <img src="https://i.imgur.com/Q5WGv14.jpg">
+        <img src="https://i.imgur.com/SafE5Bu.jpg">
+        <img src="https://i.imgur.com/fYNotJW.jpg">
+        <img src="https://i.imgur.com/74Bb97T.jpg">
+        <img src="https://i.imgur.com/V6sJH86.jpg">
+        <img src="https://i.imgur.com/0vqOxzq.jpg">
+        <img src="https://i.imgur.com/YjlyIwc.jpg">
+        <img src="https://i.imgur.com/tnP0Tnf.jpg">
+        <img src="https://i.imgur.com/9oR7edM.jpg">
+        <img src="https://i.imgur.com/594WV0S.jpg">
+        <img src="https://i.imgur.com/zfQdrN0.jpg">
+        <img src="https://i.imgur.com/WQuDYJU.jpg">
+        <img src="https://i.imgur.com/xCp59Kd.jpg">
+        <img src="https://i.imgur.com/KE3Jcec.jpg">
+        <img src="https://i.imgur.com/q4luPlF.jpg">
+        <img src="https://i.imgur.com/bceHTVl.jpg">
+        <img src="https://i.imgur.com/gwOvUo3.jpg">
+        <img src="https://i.imgur.com/YfyHo9q.jpg">
+        <img src="https://i.imgur.com/NmSJUzU.jpg">
+        <img src="https://i.imgur.com/uuPU4Wx.jpg">
+        <img src="https://i.imgur.com/SyXQunJ.jpg">
+        <img src="https://i.imgur.com/0rKHojV.jpg">
+        <img src="https://i.imgur.com/1MQlTYj.jpg">
+        <img src="https://i.imgur.com/0H2CffK.jpg">
+        <img src="https://i.imgur.com/gQcHc6i.jpg">
+        <img src="https://i.imgur.com/mqe41ZV.jpg">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL MAINTENANCE LOG -->
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-ic"><svg viewBox="0 0 16 16"><path d="M2 3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1H2V3zm0 3h12v7a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6zm3 2v1h6V8H5zm0 2.5v1h4v-1H5z"/></svg></div>
+      <div class="sec-ttl">Complete Maintenance Log</div>
+    </div>
+    <div class="sec-bd" style="padding:0;">
+      <div class="log-wrap">
+        <table class="log-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>KM</th>
+              <th>Shop</th>
+              <th>Work Performed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="log-date">05/21/2007</td><td class="log-km">38,839</td><td class="log-shop">Woodhouse Mazda</td><td>Oil-Filter replacement · Oil change · Topped up fluid levels and adjusted tire pressure · Brake Fluid Flush · Left Front Fog Light Replaced · Passenger Side Parking Light Buld Replaced<ul class="log-parts"><li>Oil Filter <span class="log-pn">99610722553</span> — $29.59</li><li>Synthetic engine oil <span class="log-pn">MOBIL0W40</span> — $7.00</li><li>Labor — $62.40</li><li>Dot 4 Brake Flush <span class="log-pn">M84032</span> — $12.75</li><li>Labor — $104.00</li><li>Fog Light Bulb <span class="log-pn">0000110H3</span> — $22.56</li><li>Labor — $31.20</li><li>Porsche Position Light Bulb <span class="log-pn">99963114090</span> — $20.93</li><li> — $31.20</li></ul></td></tr>
+            <tr><td class="log-date">04/01/2009</td><td class="log-km">46,391</td><td class="log-shop">Pfaff Porsche</td><td>Check for Oil Leak from Engine Area · RMS Seal was replaced on 27/08/2007 · Intermediate Shaft Seal Leaking · Replaced Intermediate Shaft Seal, Rere trans, flywheel, chaintensionors, replaced seal, shampood engine · ReRe Engine Covers, Drain and fill engine oil. Replace filter and gasket · set tire pressures · check all fluid levels · check peration of exterior lamps<ul class="log-parts"><li>996 R Main Kit <span class="log-pn">PK996RMS-M</span></li><li>Part Cleaner <span class="log-pn">NP-8909107</span></li><li>Hex head Screw <span class="log-pn">900-385-275-01</span></li><li>Torx Screw 6x2 <span class="log-pn">900-385-275-09</span></li><li>Torx Screw 6x3 <span class="log-pn">999-385-004-01</span></li><li>Alum Seal Ring <span class="log-pn">900-123-106-30</span></li><li>Seal Ring 27 X <span class="log-pn">900-123-147-30</span></li><li>Rubber Gasket <span class="log-pn">996-105-112-01</span></li><li>Pan Head Screw <span class="log-pn">999-073-092-01</span></li><li>Tie Strap <span class="log-pn">NP1076</span></li><li>Mobil1 0W40 <span class="log-pn">NOP1051</span> — $12.95</li><li>Oi Filter Ins <span class="log-pn">996-107-225-53</span> — $30.28</li><li>Alum Seal Ring <span class="log-pn">900-123-106-30</span> — $1.02</li><li>Labor — $193.50</li></ul></td></tr>
+            <tr><td class="log-date">11/03/2009</td><td class="log-km">48,764</td><td class="log-shop">Pfaff Porsche</td><td>Engine oil leak, replaced internal shaft seal · Emissions Test · Performed Safety Inspection · Installed and Balanced Left Rear Tire · Replaced License Plate Light<ul class="log-parts"><li>996 R Main Kit <span class="log-pn">PK996RMS-M</span></li><li>Part Cleaner <span class="log-pn">NP-8909107</span></li><li>Hex head Screw <span class="log-pn">900-385-275-01</span></li><li>Torx Screw 6x3 <span class="log-pn">999-385-004-01</span></li><li>Alum Seal Ring <span class="log-pn">900-123-106-30</span></li><li>Seal Ring 27 X <span class="log-pn">900-123-147-30</span></li><li>Rubber Gasket <span class="log-pn">996-105-112-01</span></li><li>Pan Head Screw <span class="log-pn">999-073-092-01</span></li><li>Tie Strap <span class="log-pn">NP1076</span></li><li> — $40.00</li><li> — $129.00</li><li>SC2 295/30R18N <span class="log-pn">NP-8909107</span> — $480.00</li><li>Lic Plate Light <span class="log-pn">964-631-320-00-01C</span> — $27.76</li></ul></td></tr>
+            <tr><td class="log-date">11/05/2009</td><td class="log-km">48,766</td><td class="log-shop"></td><td><span class="log-badge lb-own">Ownership</span>Transfer Ownership to 3rd owner *2nd Canadian Owner* </td></tr>
+            <tr><td class="log-date">06/28/2010</td><td class="log-km">58,078</td><td class="log-shop">Furtmair Auto</td><td>Change Oil Filter · Change Engine Oil · Change Air Filter · Change Poly Rib belt · Change Cabin Filter · Labor · Replaced front tires · replaced rear tires · Tire installation and balance · Wheels Alignment<ul class="log-parts"><li>Oil Filter <span class="log-pn">99610722552</span> — $23.99</li><li>Kendall Gt 1 Syn Oil <span class="log-pn">OI-5W40</span> — $10.25</li><li>Air Filter <span class="log-pn">996-110-131-51</span> — $39.99</li><li>OEM Poly-Rib-Belt <span class="log-pn">VB-K6PK2115</span> — $49.99</li><li>Cabin Filter with Chảcol <span class="log-pn">997-571-219-00</span> — $59.99</li><li> — $88.00</li><li>Contiental Sport Contact <span class="log-pn">225/40ZR18</span> — $360.00</li><li>Contiental Sport Contact <span class="log-pn">295/30ZR18</span> — $510.00</li><li> — $80.00</li><li> — $250.00</li></ul></td></tr>
+            <tr><td class="log-date">07/22/2010</td><td class="log-km">—</td><td class="log-shop">Furtmair Auto</td><td>Replaced Key Remote · Code Remote<ul class="log-parts"><li>Key Remote <span class="log-pn">996-637-244-42</span> — $182.00</li><li> — $49.00</li></ul></td></tr>
+            <tr><td class="log-date">12/10/2010</td><td class="log-km">63,988</td><td class="log-shop">Furtmair Auto</td><td><span class="log-badge lb-eng">Engine</span> Engine replaced with a new one from Porsche with larger IMS, non-serviceable · New Factory Engine Build: 05/28/2010 · Refill AC · Power steering wheel Hydraulic Fluid · Install Winter Wheels<ul class="log-parts"><li>Labor — $2,240.00</li><li> <span class="log-pn">M96/03AT66569026</span> — $19,500.00</li><li>Gas Ket <span class="log-pn">996-111-113-50</span> — $9.92</li><li>oring <span class="log-pn">996-707-434-41</span> — $3.22</li><li>O Ring <span class="log-pn">999-707-439-41</span> — $5.11</li><li>OEM Poly-Rib-Belt <span class="log-pn">VB-K6PK2115</span> — $49.99</li><li>Flywheel Bolt <span class="log-pn">999-073-092-01</span> — $2.00</li><li>Lower seals <span class="log-pn">999-707-362-40</span> — $5.20</li><li>Anti freeze <span class="log-pn">CH-RAD</span> — $9.49</li><li>Kendall Gt 1 Syn Oil <span class="log-pn">OI-5W40</span> — $9.40</li><li>Hoseclamp <span class="log-pn">M25X40</span> — $4.52</li><li>Hoseclamp <span class="log-pn">M20X32</span> — $2.76</li><li>AC Refrigerant <span class="log-pn">AC-R134A</span> — $0.69</li><li>Hydraulic Fluid <span class="log-pn">G002000</span> — $3.77</li></ul></td></tr>
+            <tr><td class="log-date">04/25/2011</td><td class="log-km">—</td><td class="log-shop">Furtmair Auto</td><td>Oil service inspection · Change oil and filter · adjust fluid level, power steering, coolant, brake fluid<ul class="log-parts"><li>Nut rubber <span class="log-pn">999-500-092-00</span> — $5.15</li><li>oil filter <span class="log-pn">99610722552</span> — $23.99</li><li>Kendall Gt 1 Syn Oil <span class="log-pn">OI-5W40</span> — $0.94</li><li>gasket copper seal <span class="log-pn">4602227</span> — $0.97</li><li>silicone spray <span class="log-pn">8939221</span> — $4.95</li></ul></td></tr>
+            <tr><td class="log-date">04/27/2011</td><td class="log-km">70,317</td><td class="log-shop">Furtmair Auto</td><td>Remove winter wheels and install summer wheels</td></tr>
+            <tr><td class="log-date">11/05/2011</td><td class="log-km">78,639</td><td class="log-shop">Furtmair Auto</td><td>Remove summer wheels and install winter wheels</td></tr>
+            <tr><td class="log-date">10/17/2012</td><td class="log-km">94,283</td><td class="log-shop">Furtmair Auto</td><td>replace fog lamp right side<ul class="log-parts"><li>H3 12v 55W <span class="log-pn">64151</span> — $8.19</li></ul></td></tr>
+            <tr><td class="log-date">12/02/2013</td><td class="log-km">110,454</td><td class="log-shop">Furtmair Auto</td><td>yearly maintenance · Service, winter tires belt squeel · all jobs listed in the maintenance passport · remove and reinstall cracked expansion tank including lowering engine to gain access · remove and reinstall leaking water pump<ul class="log-parts"><li>water pump gasket <span class="log-pn">99610634054</span> — $8.40</li><li>expansion tak cap <span class="log-pn">99610644704</span> — $19.99</li><li>expansion tank <span class="log-pn">99610615704</span> — $188.43</li><li>water pump oem <span class="log-pn">99610601155</span> — $363.23</li><li>serp belt <span class="log-pn">2115</span> — $34.70</li><li>antifreeze hzmt porsche pink — $13.55</li><li>Kendall Gt 1 Syn Oil <span class="log-pn">OI-5W40</span> — $0.94</li><li>Oil filter <span class="log-pn">99610722552</span> — $23.99</li><li>hose clamp high pressure <span class="log-pn">m6x11</span></li></ul></td></tr>
+            <tr><td class="log-date">01/30/2014</td><td class="log-km">—</td><td class="log-shop">Furtmair Auto</td><td>car would not crank over, starter wins after starting sometimes it cranks over real slow =&gt; read-out with piwis =&gt; no faults in any control units · re-check all power and ground strtaps for corrosion or loss connection, because of slow turning -&gt; starter craked slow -&gt; connect charger -&gt; started cranked fine (cables are all okey) · connect battery to charger and see if battery is solvated (daily driver, but short distances) · check charging circult: alternator pattern on digital computer analyzer, voltage supply and ampere-rate. Current draw =&gt; when cranking voltage drops to 8.4 volts -&gt; recommend new battery char<ul class="log-parts"><li>Bosch Starter Factory Rebuild <span class="log-pn">SR0808N</span> — $349.99</li><li>H7-C94R Battery (4RMF <span class="log-pn">9996110802</span> — $199.99</li></ul></td></tr>
+            <tr><td class="log-date">04/17/2014</td><td class="log-km">115,656</td><td class="log-shop">Furtmair Auto</td><td>Install Summer Wheels · Front end makes squeaky sound after a hard stopping manoverur. No squeak heard · Remove and reinstall clutch assembly Including R+R transaxle · 4 wheels alignment: front camber and reat toe and rear camber was out of spec =&gt; now all in spec<ul class="log-parts"><li>Clutch PP bolt <span class="log-pn">90006713103</span></li><li>Hardy disc drive shaft <span class="log-pn">99642113701</span> — $149.99</li><li>Clutch Kit F&amp;S 3 piece <span class="log-pn">99611691102</span> — $849.99</li><li>Contiental Sport Contact <span class="log-pn">295/30ZR18</span></li></ul></td></tr>
+            <tr><td class="log-date">07/24/2014</td><td class="log-km">119,992</td><td class="log-shop">Furtmair Auto</td><td>Hit something right rear =&gt; do 4 wheel alignment · Nail in tire (2 right rear/1 left rear) · Yearly maintenance, all jobs listed in the passport · 4 wheel alignment<ul class="log-parts"><li>oil filter <span class="log-pn">99610722552</span> — $23.99</li><li>Kendall Gt 1 Syn Oil <span class="log-pn">OI-5W40</span> — $0.94</li><li>gasket copper seal <span class="log-pn">4602026</span> — $0.88</li><li>tires repair</li></ul></td></tr>
+            <tr><td class="log-date">10/30/2014</td><td class="log-km">128,145</td><td class="log-shop">Furtmair Auto</td><td>CEL On =&gt; Sec air fault. · Cold start issue, eg low idle in morning when below 8 degree. · Find vaccum leak for sec air injection · dianose sec air injection, replace defective sec air. Check valve include remove and reinstaa alternator, replace alternator because mounting bracket was seast and broke off<ul class="log-parts"><li>Air check valve <span class="log-pn">96411095001</span> — $42.06</li><li>Bosch alternator <span class="log-pn">AL0700X</span> — $347.96</li><li>Labor — $270.00</li></ul></td></tr>
+            <tr><td class="log-date">02/24/2016</td><td class="log-km">149,787</td><td class="log-shop">Furtmair Auto</td><td>brake pad warning light -&gt; car needs front brakes, also recheck rears too · install washer noozle trim, headlight left · remove and reinstall both windshield washer nozzles, udpated version · brake pads, front -&gt; replaced. Clean, derus, free-up and bgease breake pads and brake calipers · front brake rotors replaced including R+R brake calipers (not hub mounted rotors), brake pads removed.<ul class="log-parts"><li>washer nozzle trim driver chrome <span class="log-pn">99662814300</span> — $82.18</li><li>washer nozzle windshield <span class="log-pn">99762807700</span></li><li>brake disc front left <span class="log-pn">99635140904</span> — $175.00</li><li>brake disc front right <span class="log-pn">99635141004</span> — $175.00</li><li>pad sensor front <span class="log-pn">99661236500</span> — $25.00</li><li>brake pad set front <span class="log-pn">99735194902</span> — $250.00</li><li>buld 64151 pk22s <span class="log-pn">h3 12v 55w</span> — $14.99</li><li>axle boot <span class="log-pn">99634929100</span> — $49.99</li><li>nut drive shaft 986 rear <span class="log-pn">99908464101</span> — $11.95</li><li>Labor</li></ul></td></tr>
+            <tr><td class="log-date">04/07/2016</td><td class="log-km">152,365</td><td class="log-shop">Furtmair Auto</td><td>Car does not fill up -&gt; removed and reinstalled gas tank vent valve with reed switch. Include R+R battery the masure switch resistance was 4-5m)HMS closed and 90 kOHM open -&gt; bad switch. · Yearly maintenance: all job listed in the maintenance passport. · porsche system tester 3 PIWIS read out all fault codes and system data: does not include troubleshooting, adaption and reprogramming of control units. · 4 wheel alignment: front toe rear toe and rear left camber was off<ul class="log-parts"><li>Michelon pilot sport ps2 <span class="log-pn">225/40R18 88Y</span></li><li>Michelin pilot sport ps2 <span class="log-pn">295/30R18 98Y</span></li><li>reed contact <span class="log-pn">99661322401</span> — $50.13</li><li>fuel vent valve <span class="log-pn">99620114301</span> — $103.80</li><li>fuel door rose <span class="log-pn">99762450500</span> — $1.23</li><li>freight <span class="log-pn">porsche</span> — $27.30</li><li>oil filter <span class="log-pn">99610722552</span> — $23.99</li><li>Kendall Gt 1 Syn Oil <span class="log-pn">OI-5W40</span> — $0.94</li><li>gasket copper seal M18x24 <span class="log-pn">4601824</span> — $1.49</li><li>Labor</li></ul></td></tr>
+            <tr><td class="log-date">06/30/2016</td><td class="log-km">—</td><td class="log-shop">Furtmair Auto</td><td><ul class="log-parts"><li>wheel hub cap <span class="log-pn">99336130310</span> — $68.08</li></ul></td></tr>
+            <tr><td class="log-date">11/04/2016</td><td class="log-km">163,028</td><td class="log-shop">Furtmair Auto</td><td>yearly maintenance · replaced summer tires with winter tires, balance front wheels · noticable clunk form rear when driving straight thro seal in pavement -&gt; nothing found on rear, just front · car handles terriable in rain &gt; noticeable front tires noise due feathered · rem and reinst front left sway bar link -&gt; for sure has play · breake pads rear rem and reinst incl clean, derust, freeup and grease brake pads and calipers · rear brake rotors rem and reins incl R+R brake calipers not hub mounted rotors, brake pads removed<ul class="log-parts"><li>dunlop winter sport rear <span class="log-pn">265/35/18</span> — $325.00</li><li>Oil filter <span class="log-pn">99610722552</span> — $23.99</li><li>Kendall Gt 1 Syn Oil <span class="log-pn">OI-5W40</span> — $0.94</li><li>gasket copper seal <span class="log-pn">4601824</span> — $1.49</li><li>swaybar link front <span class="log-pn">99634307304</span> — $126.99</li><li>brake pads rear <span class="log-pn">99635294903</span> — $150.00</li><li>wear sensor rear <span class="log-pn">99634307305</span></li><li>brake disc left and right rear <span class="log-pn">996352405/406 02</span> — $185.00</li><li>air filter <span class="log-pn">99611013152</span> — $39.99</li><li>Labor</li></ul></td></tr>
+            <tr><td class="log-date">04/03/2017</td><td class="log-km">170,560</td><td class="log-shop">Furtmair Auto</td><td>Inst summer wheels · 4 wheels alginment due feathering and loud noise complain from rear tires · yearly maintenance: all jobs in passport · rm and reinst both front, L+R inner+outer tie rod ends · 4 wheel alginments: front tow was off but we changed tierod ends, because left one had lots of play and right one had slight play =&gt; rear tow was also badly off -&gt; now all in spec<ul class="log-parts"><li>sumitomo htr z III front summer tires <span class="log-pn">225/40R18 92Y</span> — $300.00</li><li>sumitomo htr z III rear summer <span class="log-pn">295/30R18 94Y</span> — $360.00</li><li>tie rod inner <span class="log-pn">99634732203</span></li><li>tie rod end outer <span class="log-pn">99634713104</span> — $94.59</li><li>Kendall Gt 1 Syn Oil <span class="log-pn">OI-5W40</span> — $0.94</li><li>oil filter <span class="log-pn">99610722552</span> — $23.99</li><li>gasket copper seal M18x24 <span class="log-pn">4601824</span> — $1.49</li><li>Labor</li></ul></td></tr>
+            <tr><td class="log-date">05/11/2017</td><td class="log-km">—</td><td class="log-shop">Furtmair Auto</td><td>replaced left gasket, manifold to cut (installed) · top up coolant and presure test, no leak found -&gt; customer "cross-threaded" explansion tank cap · piwis read out: no fault codes and no misfire in DME · recheck coolant and replaced expansion cap · recheck coolant leven hot and cold<ul class="log-parts"><li>gasket exhaust <span class="log-pn">99611111350</span> — $4.76</li><li>expansion tank <span class="log-pn">99610644704</span> — $25.00</li><li>Labor</li></ul></td></tr>
+            <tr><td class="log-date">06/05/2017</td><td class="log-km">—</td><td class="log-shop">Furtmair Auto</td><td>front strut chattering sound, real loud, also can feel in steering wheel · rem and inst right front stabi link<ul class="log-parts"><li>stabi bar front boxster <span class="log-pn">99634307003 R</span></li></ul></td></tr>
+            <tr><td class="log-date">12/20/2017</td><td class="log-km">178,713</td><td class="log-shop">Furtmair Auto</td><td>rm summers wheel, inst winter · left front outer cv boot is ripped, battery is weak, exhaust 3 bolt flange gasket on passenger side and sleeve clamp for both sides · replaced level sensor link bracket on left rear. Link itself is seized and should be replaced<ul class="log-parts"><li>headlight adjuster rod clip <span class="log-pn">99634137103</span> — $6.93</li><li>Labor</li></ul></td></tr>
+            <tr><td class="log-date">06/01/2018</td><td class="log-km">180,223</td><td class="log-shop">Furtmair Auto</td><td>AC compressor made a bad noise beginning of the year, now it does not make any noise anymore and AC is not working -&gt; no noise · passenger door when open does not drop the window _. Replaced door latch assembly · right rear tire is flat · a/c service: evacuate, refill and leak test a/c system, does not incl trouble shooting of electronic systems · fill a/c system with DYE. "Uv leak detection takes the guess work out of locating the leak, the first time, all the time · drivers door window drive? -&gt; customer lubed window, therefore it is "chattering"<ul class="log-parts"><li>AC-DYE for black light R12 <span class="log-pn">499108</span></li><li>AC Refrigerant <span class="log-pn">AC-R134A</span></li><li>door latch assembly passenger <span class="log-pn">3B1837016P</span> — $424.00</li></ul></td></tr>
+            <tr><td class="log-date">03/08/2018</td><td class="log-km">179,832</td><td class="log-shop">Furtmair Auto</td><td>reinst summer tires · replaced leveling bar on car as per last workorder · yearly maintenance · re-check exhaust: replaced passenger flanch and all sleeve clamp bolts · re-char battery · door lock beeps and red light is flashing -&gt; passenger side window does not drop, car has fault code 47 + 61 according to fault-tree  points to passenger side door latch · oil pressure gage is dropping to 0 and then comes back on, replace oil pressure sensor · R+R left front sway bar link · R + R left front outer axle boot (broken, therefore replace inner too (old and cracking) · brake flud flush and replacement · tail pipe sleeve clamps are rusted, requires R+R bumper, both front thrust arms have play · rear rtailing arm also has play · ignition coils are cracking badly · ign coil heat shields are rusted out · both front inner brake discs rusted bad<ul class="log-parts"><li>axle boot <span class="log-pn">996349293 FR</span> — $49.99</li><li>cv boot kit( front left outer) <span class="log-pn">99634929100</span> — $46.77</li><li>DOT4/ate 8 blue chemicals brake fluid TYP 200</li><li>gasket exhaust <span class="log-pn">99611111350</span></li><li>ST-stabi link front <span class="log-pn">99634307303</span> — $69.00</li><li>switch oil pressure <span class="log-pn">99660620302</span> — $104.13</li><li>oil filter <span class="log-pn">99610722552</span> — $23.99</li><li>Kendall Gt 1 Syn Oil <span class="log-pn">OI-5W40</span> — $0.94</li><li>Labor</li></ul></td></tr>
+            <tr><td class="log-date">07/07/2020</td><td class="log-km">190,072</td><td class="log-shop">Furtmair Auto</td><td>porsche system tester 3 PIWIS read out all fault codes and system data: does not incl trouble shooting, adaption and re-programming of control unit · found misfire fault codes in #5 and #3, no ther faults, start engine, engine runs rough, misfiring · R=R ignition coils and spark plugs · oil service and brake fluid due · lower timing chain tensioner leaking oil · car was 1 liter low of coolant when brought in · wheels shaking above 100km/h · R + R fornt bumper, clean radiators and A/C condensors · replace left front condensor both A/C seals · R+R right rear covering and replace leaking A/C line o-ring in wheel well · diagnose left front cooling fan, fan is spinning but not working · R+R left front cooling fan · battery R+R · perform vehicle hand over after bat replacement<ul class="log-parts"><li>ignition coil <span class="log-pn">99760210404</span> — $103.00</li><li>bosch spark plugs <span class="log-pn">FGR 5 KQEO</span></li><li>seal A/C condensor WB#123 <span class="log-pn">99970743441</span></li><li>heat shield (ignition coils) <span class="log-pn">99610444502</span></li><li>seal A/C c4 <span class="log-pn">99970725240</span></li><li>cooling fan driver side <span class="log-pn">99662412700</span> — $609.58</li><li>bosch battery <span class="log-pn">S5572</span> — $249.99</li><li>Labor</li></ul></td></tr>
+            <tr><td class="log-date">11/15/2021</td><td class="log-km">199,654</td><td class="log-shop">Furtmair Auto</td><td>yearly maintenance · Brake Fluid Flush and replacement job · top up coolant, no leak found, clutch pedal stiff and squeaks, rear level sensor arm seized at balljoint but still works<ul class="log-parts"><li>Oil filter — $23.99</li><li>Kendall Gt 1 Syn Oil — $0.94</li><li>DOT4/ate 8 blue chemicals brake fluid TYP 200</li><li>fuel cap <span class="log-pn">99620124103</span> — $21.81</li><li>Labor</li></ul></td></tr>
+            <tr><td class="log-date">03/25/2022</td><td class="log-km">—</td><td class="log-shop">Furtmair Auto</td><td>customer supplied his own muffler -&gt; R+R after market muffler, incl cut out and torch out through bolt bushings · replace front hood shocks<ul class="log-parts"><li>shock front hood lid <span class="log-pn">99651155101</span></li><li>Labor</li></ul></td></tr>
+            <tr><td class="log-date">10/20/2022</td><td class="log-km">203,922</td><td class="log-shop">Furtmair Auto</td><td>cruise control not working, under 50km/h light is on but over light does not come on-&gt; clutch is real stiff and pedal does not return all the way. If pedal is pushed back cruise works fine -&gt; no further authorization received · Yearly maintenance · R+R right/left front fog light bulb -&gt; right side burned out and incorrect installed, check left side, housing is broken and someone installed foam to hold bulb up -&gt; car needs complete left headlight assembly · adjust parking brake incl R+R wheels holds at 6 clicks, needs new shoes · engine oil level: dip stick versus gage: dip stick 1/2, gage full · R+R clutch assembly incl R+R transaxle · replace flex disc for 4 wd · note: after clutch kit and release fork with springs was replaced, clutch pedal moves easy and actuates cruise control switch therefore, sruise control is working now too. · remove flywheel and replaced rear main seal incl wash down engine<ul class="log-parts"><li>oil filter</li><li>LM HT A40 full synthetic euro porsche <span class="log-pn">OI-5W40</span> — $1.29</li><li>blub H3 12 v 55w <span class="log-pn">64151</span></li><li>Clutch Kit F&amp;S 3 piece <span class="log-pn">99611691102</span> — $1,000.00</li><li>drive shaft flex disc "hardy disk" <span class="log-pn">99742102000 S1</span> — $136.31</li><li>release bearing guide <span class="log-pn">9P1 141 181</span></li><li>seal crankshaft main <span class="log-pn">99710121200</span> — $78.45</li><li>clutch spring <span class="log-pn">99642308119</span> — $98.95</li><li>clutch release arm <span class="log-pn">99711671201</span> — $49.98</li><li>ball socket bushing <span class="log-pn">99611671602</span> — $56.22</li><li>spoiler front OEM black <span class="log-pn">99650555502</span> — $267.30</li><li>Labor</li></ul></td></tr>
+            <tr><td class="log-date">07/20/2023</td><td class="log-km">203,922</td><td class="log-shop">Furtmair Auto</td><td>R+R abs brake pressure switch (brown) and erase faults in computer · tested wheel speeds and the all read fine even though faults was found for front left sensor line<ul class="log-parts"><li>switch brake light <span class="log-pn">99661311302</span> — $21.60</li></ul></td></tr>
+            <tr><td class="log-date">07/30/2024</td><td class="log-km">—</td><td class="log-shop">Furtmair Auto</td><td>Pre Purchase Inspection · tapping noise when car is warm and at idle · perform ppi with bore scoring inspection · when power loss occurred car was shifting from 1st to 2nd at 2500rpm and then rpm dropped below 1000 and car did not accelerate · brake fluid flush</td></tr>
+            <tr><td class="log-date">08/22/2024</td><td class="log-km">212,778</td><td class="log-shop">Furtmair Auto</td><td><span class="log-badge lb-eng">PPI</span> Pre Purchase Inspection · - PIWIS read out all fault codes and system data -&gt; no fault for intermittend power loss · - oil leak underneath somewhere and slight tapping noise when car is warm and at idle · Brake Fluid Flush and replacement job · repair intake boot as per pictures · R + R spark plugs and incl bore scope -&gt; all ok · R + R both engine mounts · R + R catalytic convertor · replace freeze plug<ul class="log-parts"><li>engine mount <span class="log-pn">99337504908</span></li><li>freeze plug <span class="log-pn">999036026</span> — $19.25</li><li>exhaust clamp <span class="log-pn">99611122001</span> — $48.76</li><li>oxygen sensor bosch 16433 <span class="log-pn">99660616801</span> — $286.48</li><li>oxygen sensor bosch 16541 <span class="log-pn">99660617801</span> — $242.63</li><li>catalytic convertor <span class="log-pn">996113032 BX</span> — $3,694.00</li><li>DOT4/ate 8 blue chemicals brake fluid TYP 200</li><li>LM HT A40 full synthetic euro porsche <span class="log-pn">OI-5W40</span> — $1.29</li><li>air filter <span class="log-pn">99611013152</span> — $59.99</li><li>Cabin Filter with Chảcol <span class="log-pn">997571219 00</span> — $84.99</li><li>fuel sender seal ring <span class="log-pn">PAB 919133</span> — $26.00</li></ul></td></tr>
+            <tr><td class="log-date">08/26/2024</td><td class="log-km">213,000</td><td class="log-shop">—</td><td><span class="log-badge lb-own">Ownership</span>Transfer Ownership to current owner</td></tr>
+            <tr><td class="log-date">10/12/2024</td><td class="log-km">215,888</td><td class="log-shop">—</td><td>Replace 4 tires<ul class="log-parts"><li>295/30/18 michelin ps4s <span class="log-pn">74446</span> — $531.11</li><li>225/40/18 michelin ps4s <span class="log-pn">93158</span> — $297.56</li></ul></td></tr>
+            <tr><td class="log-date">11/28/2024</td><td class="log-km">218,057</td><td class="log-shop">Mantis Autosport</td><td>Oil change with new filter and washer. Pump tires for winter storage<ul class="log-parts"><li> <span class="log-pn">Oil</span> — $15.83</li><li> <span class="log-pn">Oil filter</span> — $29.31</li><li> <span class="log-pn">washer</span> — $1.75</li><li>Labor — $160.00</li></ul></td></tr>
+            <tr><td class="log-date">08/28/2025</td><td class="log-km">228,567</td><td class="log-shop">DIY</td><td>Oil change with new filter and washer. · LN magnetic drain plug. · Replace new front wiper blades<ul class="log-parts"><li>5W-40 <span class="log-pn">LM2332</span> — $48.32</li><li>Porsche Engine Oil Filter <span class="log-pn">MAH-OX1281DECO</span> — $15.63</li><li> <span class="log-pn">OEM-977751</span> — $0.29</li><li>Audi Porsche Windshield Wiper Blade Set <span class="log-pn">BOS-3397001582</span> — $22.39</li><li>Billet Stainless Steel Magnetic Engine Oil Drain Plug <span class="log-pn">884109906773</span> — $27.81</li></ul></td></tr>
+            <tr><td class="log-date">01/12/2026</td><td class="log-km">236,822</td><td class="log-shop">DIY</td><td>Oil change with new filter and washer. · Replace engine air filter. Replae cabin air filter<ul class="log-parts"><li>5W-40 <span class="log-pn">LM2332</span></li><li>Porsche Engine Oil Filter <span class="log-pn">MAH-OX1281DECO</span></li><li>MAH-LX5821 <span class="log-pn">Mahle LX5821</span></li><li>Mann CUK3360 <span class="log-pn">Mann CUK3360</span></li></ul></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARFAX SECTION -->
+  <div class="sec">
+    <div class="sec-hd">
+      <div class="sec-ic"><svg viewBox="0 0 16 16"><path d="M4 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 0 1-1zm1 2v1h6V3H5zm0 3v1h6V6H5zm0 3v1h4V9H5z"/></svg></div>
+      <div class="sec-ttl">Carfax Report</div>
+    </div>
+    <div class="sec-bd">
+      <p style="font-size:12.5px; color:#6b7280; margin:0 0 0.85rem; line-height:1.6;">Official vehicle history report — VIN WP0AA29942S621974.</p>
+      <div class="gallery-grid" id="gallery-carfax">
+        <img src="https://i.imgur.com/fKX9WNR.jpg">
+        <img src="https://i.imgur.com/JjWZEfd.jpg">
+        <img src="https://i.imgur.com/BcUbA30.jpg">
+        <img src="https://i.imgur.com/y9CHp3d.jpg">
+        <img src="https://i.imgur.com/5FLN8df.jpg">
+        <img src="https://i.imgur.com/kjzJGjV.jpg">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-bar">
+    <div class="cta-l">
+      <strong>$42,000 CAD · Toronto, ON</strong>
+      <p>Serious inquiries only. Inspection welcome. All docs on hand.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Lightbox -->
+<div class="lb" id="lb">
+  <button class="lb-close" onclick="closeLb()">✕</button>
+  <button class="lb-prev" onclick="shiftLb(-1)">&#8249;</button>
+  <img id="lb-img" src="" alt="">
+  <button class="lb-next" onclick="shiftLb(1)">&#8250;</button>
+</div>
+
+<script>
+  const imgs = Array.from(document.querySelectorAll('#gallery img, #gallery-oil img, #gallery-bore img, #gallery-carfax img'));
+  let cur = 0;
+  imgs.forEach((img, i) => img.addEventListener('click', () => openLb(i)));
+  function openLb(i) { cur = i; document.getElementById('lb-img').src = imgs[i].src; document.getElementById('lb').classList.add('open'); }
+  function closeLb() { document.getElementById('lb').classList.remove('open'); }
+  function shiftLb(d) { cur = (cur + d + imgs.length) % imgs.length; document.getElementById('lb-img').src = imgs[cur].src; }
+  document.getElementById('lb').addEventListener('click', function(e) { if (e.target === this) closeLb(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); if (e.key === 'ArrowLeft') shiftLb(-1); if (e.key === 'ArrowRight') shiftLb(1); });
+</script>
+</body>
+</html>
